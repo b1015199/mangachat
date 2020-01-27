@@ -1,0 +1,205 @@
+
+header{
+    position:fixed;
+    width:100%;
+    background:#ffc107;
+    z-index:2;
+    height:55px;
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.first{
+  visibility: hidden;
+}
+
+.first_display {
+  visibility : visible;
+}
+
+#app header h1{
+    padding-left:10px;
+    padding-top:8px;
+    color:#ffffff;
+}
+
+.return{
+  margin: 0 30px;
+  display: inline;
+  float: left;
+}
+
+.head_main{
+    display: inline;
+}
+
+/*
+.chaturl{
+    padding-left:10px;
+}
+
+.chaturl a{
+    color:#ffffff;
+    font-size:14px;
+}
+
+.chaturl a:hover{
+    text-decoration: underline;
+}
+*/
+
+footer{
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    height:120px;
+    border-top:1px solid #aaaaaa;
+    background:#ffffff;
+}
+
+footer .field{
+    padding:10px;
+}
+
+.input.is-medium{
+  font-size: 40px;
+  width: 480px;
+  float: right;
+}
+
+.button-submit{
+    height:90px;
+    line-height:1.0;
+    width:100%;
+    font-size: 40px;
+}
+
+.button-active{
+    font-size: 25px;
+    height:90px;
+    line-height:1.0;
+    width:50%;
+    float: left;
+}
+
+.control-submit{
+    width:23%;
+}
+
+.control-mangaeffect{
+    /*float: left;*/
+    /*display: flex;*/
+
+}
+
+.select {
+    font-size: 15px;
+    margin: 20px 0 0 10px;
+}
+
+#message-contents{
+    background-image: url("../image/bg_paper.jpg");
+    z-index:1;
+    padding: 55px 10px 76px 10px;
+    background:#ffffff;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.message-wrapper{
+    margin:5px 10px;
+    padding: 10px 0;
+    /*border-bottom: solid 4px #000000;
+    border-top: solid 4px #000000;*/
+}
+
+.message-wrapper .box{
+    float:left;
+}
+
+/*.box.mymessageは,boxクラスとmymessageクラスが含まれている要素だけに適用*/
+.message-wrapper .box.mymessage{
+    float:right;
+    transform:scale(-1,1);
+}
+
+.box.mymessage .content{
+    transform:scale(-1,1);
+}
+
+div.content {
+    word-break: break-all;
+    max-width: 320px;
+    margin-left: 30px;
+}
+
+.mymessage p{
+    text-align: right;
+}
+
+.content p{
+    text-align: left;
+}
+
+.mymessage .avater{
+    display: none;
+}
+
+.avater{
+    position: relative;
+    background-image: url("../image/avater.jpg");
+    background-size: 100% 100%;
+    width: 100px;
+    height: 120px;
+    float:left;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.avater span{
+    position: absolute;
+    top: 0;
+    right: 60%;
+    bottom: 60%;
+    left: 0;
+}
+
+/*bulma.cssの上書き */
+.box{
+  background-image: url("../image/balloon_default.png");
+  background-size: 100% 100%;
+  border-style: none;
+  padding: 4.25rem;
+  box-shadow: none;
+}
+
+
+/* フキダシ変更用クラス群 */
+.balloon_exclamation.box{
+  background-image: url("../image/balloon_exclamation.jpg"); /* !!! */
+}
+.balloon_fluffy.box{
+  background-image: url("../image/balloon_fluffy.jpg"); /* ??? */
+}
+.balloon_thought.box{
+  background-image: url("../image/balloon_thought.png"); /* between () */
+}
+
+/* 漫符変更用クラス群 */
+.angry{
+  background-image: url("../image/angry.png");
+  background-size: 100% 100%;
+}
+.laugh{
+  background-image: url("../image/laugh.png");
+  background-size: 100% 100%;
+}
+.guruguru{
+  background-image: url("../image/guruguru.png");
+  background-size: 100% 100%;
+}
+.odoroki{
+  background-image: url("../image/odoroki.png");
+  background-size: 100% 100%;
+}

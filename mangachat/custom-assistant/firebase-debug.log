@@ -1,0 +1,25 @@
+[debug] [2018-12-11T08:23:32.577Z] ----------------------------------------------------------------------
+[debug] [2018-12-11T08:23:32.579Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-12-11T08:23:32.580Z] CLI Version:   6.1.2
+[debug] [2018-12-11T08:23:32.580Z] Platform:      darwin
+[debug] [2018-12-11T08:23:32.580Z] Node Version:  v8.11.3
+[debug] [2018-12-11T08:23:32.580Z] Time:          Tue Dec 11 2018 17:23:32 GMT+0900 (JST)
+[debug] [2018-12-11T08:23:32.580Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-12-11T08:23:32.592Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-12-11T08:23:32.592Z] > authorizing via signed-in user
+[debug] [2018-12-11T08:23:32.593Z] [iam] checking project costom-assistant for permissions ["firebase.projects.get"]
+[debug] [2018-12-11T08:23:32.594Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/costom-assistant:testIamPermissions  
+
+[debug] [2018-12-11T08:23:33.600Z] <<< HTTP RESPONSE 200
+[debug] [2018-12-11T08:23:33.602Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/costom-assistant  
+ 
+[debug] [2018-12-11T08:23:34.513Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/pyoko/Documents/FIREBASE'...
+[info] 
+[debug] [2018-12-11T08:23:34.516Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/23613472324/clients/_:getWebAppConfig  
+ 
+[debug] [2018-12-11T08:23:35.127Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: custom-assistant
+[info] ✔  hosting: Local server: http://localhost:5000

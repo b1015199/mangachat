@@ -1,0 +1,82 @@
+<html lang="ja">
+<head>
+  <title>Manga Chat</title>
+  <meta charset="utf-8">
+  <!-- cssライブラリの読み込み(アイコン) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- bulma/myCSS -->
+  <link rel="stylesheet" href="css/bulma.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="image/favicon.ico">
+</head>
+<body>
+
+  <div id="app" class="first" v-bind:class="{ first_display : first_display }">
+
+    <!-- 画面上部 -->
+    <header>
+      <div class="return"><a href="../" class="fa fa-angle-left"></a></div>
+      <p class="head_main"><span class="fa fa-comments"></span>トーク</p>
+    </header>
+
+    <!-- 画面中部のトーク画面部分のブロック -->
+    <div id="message-contents">
+      <div v-for="message in messageList" class="message-wrapper is-clearfix">
+        <!-- ユーザ名と発言時刻の表示部分 -->
+        <div v-bind:class="isMyMessage(message)">
+          <p><strong>{{message.userName}}</strong> <small>{{displayTime(message)}}</small></p>
+          <!-- ユーザアバター -->
+          <p class="avater"><span v-bind:class="message.balloon?onMampu(message):''"></span></p>
+        </div>
+        <!-- 発言内容のブロック -->
+        <!--<div class="box" v-bind:class="{'mymessage' : isMyMessage(message)}">-->
+        <div class="box" v-bind:class="[isMyMessage(message), message.balloon?changeBalloon(message):'']">
+          <div class="content">
+            <!-- 発言内容がここに格納される -->
+            <p>{{message.message}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- メッセージ入力部分 -->
+
+    <footer>
+      <div class="field is-grouped">
+        <div class="control control-submit">
+          <button v-on:click="isBalloonActive" v-bind:class=" balloon_active? 'is-danger':'is-dark' " class="button button-active">{{ state }}</button>
+          <span class="select">
+            <select v-model="selected">
+              <option></option>
+              <option>（怒）</option>
+              <option>（笑）</option>
+              <option>（困）</option>
+            </select>
+          </span>
+        </div>
+
+        <div class="control is-expanded">
+          <!-- 双方向データバインディングのためのv-model。placeholderは初期値。is-mediumはbulmaの標準スタイル -->
+          <input v-model="message" v-on:keydown.enter="send" class="input is-medium" type="text" placeholder="メッセージを入力" />
+        </div>
+        <div class="control control-submit">
+          <button v-bind:disabled="message.length==0" v-on:click="send" class="button is-success button-submit">送信</button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- vue.js読み込み -->
+  <script src="https://unpkg.com/vue"></script>
+  <!-- トランスパイル用(スマホ向け想定のためコメントアウト) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+  <!-- 画面を下まで移動させるのに使用 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <!-- 以下Firebaseライブラリ -->
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase-database.js"></script>
+  <!-- 自分で書いたjavascriptの読み込み -->
+  <script type='text/babel' src="script.js"></script>
+</body>
+</html>

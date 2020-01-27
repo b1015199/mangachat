@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Custom Assistant</title>
+    <!-- load library -->
+    <link rel="stylesheet" href="./bulma/css/bulma.min.css">
+    <script src="./vue/dist/vue.js"></script>
+    <!-- load own files -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- Vue Block -->
+    <div id="app">
+      <p>{{ summoner.name }} のランクは {{ summoner.tier }} {{ summoner.division }}の{{ summoner.lp }}LPです</p>
+      <div v-on:click="getSummoner()">さもなー</div>
+      <div v-on:click="getRank()">らんく</div>
+
+
+
+    </div>
+    <!-- load own script -->
+    <script src="./js/script.js" charset="utf-8"></script>
+  </body>
+</html>
