@@ -52,7 +52,7 @@ let app = new Vue({
     // Firebaseの設定
     setupFirebase: function(){
         var config = {
-            apiKey: "AIzaSyDMSxp1Jp5X0QRqCtypBuHPy_rDT7bUw4M",
+            apiKey: "自分のAPIキー",
             authDomain: "manga-d28ae.firebaseapp.com",
             databaseURL: "https://manga-d28ae.firebaseio.com",
             projectId: "manga-d28ae",
